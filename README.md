@@ -18,7 +18,7 @@ This repository contains supplementary data, but also host an online version of 
 - In Data, you will find other content, such as the sound stimuli used, and other images that are used in the online version of the report. 
 
 The online version can be read here : 
-INSERT LINK
+https://matthieufra.github.io/roughness-eeg-internship-report/
 
 This report was only written using OpenSource tools, in order to create a open access work, in a web compliant format. 
 
