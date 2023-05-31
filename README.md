@@ -1,4 +1,4 @@
-# Roughness, ASSRs and two EEG device, experiment and report
+# Auditory steady states responses to roughness, exploring links with autism and comparison of two EEG devices
 
 
  This repository is meant to be an online ressource for my M1 internship report, in the Neuroscience Major of the Cogmaster at Ecole Normale Supérieure, Paris.
