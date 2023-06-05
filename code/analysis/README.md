@@ -77,34 +77,61 @@ Executable           c:\Users\mfratice\AppData\Local\anaconda3\envs\mne\python.e
 CPU                  Intel64 Family 6 Model 154 Stepping 3, GenuineIntel (20 cores)
 Memory               31.7 GB
 
-Core
+#### Core
+
 ├☑ mne               1.4.0
+
 ├☑ numpy             1.24.3 (MKL 2022.1-Product with 14 threads)
+
 ├☑ scipy             1.10.1
+
 ├☑ matplotlib        3.7.1 (backend=module://ipympl.backend_nbagg)
+
 ├☑ pooch             1.7.0
+
 └☑ jinja2            3.1.2
 
-Numerical (optional)
+
+#### Numerical (optional)
+
 ├☑ sklearn           1.2.2
+
 ├☑ numba             0.57.0
+
 ├☑ nibabel           5.1.0
+
 ├☑ nilearn           0.10.1
+
 ├☑ dipy              1.7.0
+
 ├☑ openmeeg          2.5.6
+
 ├☑ pandas            2.0.2
+
 └☐ unavailable       cupy
 
-Visualization (optional)
+
+#### Visualization (optional)
+
 ├☑ pyvista           0.39.1 (OpenGL 4.5.0 - Build 31.0.101.3959 via Intel(R) Iris(R) Xe Graphics)
+
 ├☑ pyvistaqt         0.0.0
+
 ├☑ ipyvtklink        0.2.2
+
 ├☑ vtk               9.2.6
+
 ├☑ qtpy              2.3.1 (PyQt5=5.15.6)
+
 ├☑ ipympl            0.9.3
+
 ├☑ pyqtgraph         0.13.3
+
 └☑ mne-qt-browser    0.5.0
 
-Ecosystem (optional)
+
+#### Ecosystem (optional)
+
 ├☑ mne-bids          0.12
+
 └☐ unavailable       mne-nirs, mne-features, mne-connectivity, mne-icalabel, mne-bids-pipeline
