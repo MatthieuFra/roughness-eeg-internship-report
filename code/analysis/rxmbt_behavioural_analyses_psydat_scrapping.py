@@ -1,9 +1,7 @@
 # %%
 # this script is used to preprocess the data into a usable mne epoch object
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
-import re
 
 from psychopy.misc import fromFile
 
@@ -60,6 +58,9 @@ def extract_desired_portion(filename):
 
 df['sound1'] = df['sound1'].apply(lambda x: extract_desired_portion(x))
 df['sound2'] = df['sound2'].apply(lambda x: extract_desired_portion(x))
+
+df = df.rename(columns={'slider.response': 'slider_response'})
+
 
 df
 
