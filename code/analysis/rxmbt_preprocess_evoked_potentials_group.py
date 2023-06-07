@@ -48,65 +48,36 @@ epochs = mne.read_epochs(fname, preload=True)# %%
 
 conditions = ['Global']
 
-data_files = [
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-BICUHE_ses-20230515_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-BOPYLF_ses-20230512_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-CCIERR_ses-20230512_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-CMUVBJ_ses-20230516_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-DURJIL_ses-20230517_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-FKCBDA_ses-20230522_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-FMLJCT_ses-20230516_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-FNLVBL_ses-20230515_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-GCYIJW_ses-20230509_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-GWONVA_ses-20230510_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-HYQSWK_ses-20230509_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-KTQRFK_ses-20230515_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-LRSHEM_ses-20230515_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-LWZRSF_ses-20230509_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-QBKAZX_ses-20230522_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-RABIKZ_ses-20230517_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-RSQQVJ_ses-20230512_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-SLIZVT_ses-20230517_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-SQOYJP_ses-20230522_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-TSSJPF_ses-20230511_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-UUPHMI_ses-20230509_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-VCMVJY_ses-20230522_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-WPYIVO_ses-20230522_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-XDFFWN_ses-20230511_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-XOTAFR_ses-20230522_task-roughxp_acq-qplus_evoked.fif',
-'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-ZAFAUS_ses-20230516_task-roughxp_acq-qplus_evoked.fif',
-]
-#evoked.drop_channels(['Fp2'])
 
 
-#%%
 
-evoked1 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-BICUHE_ses-20230515_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked2 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-BOPYLF_ses-20230512_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked3 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-CCIERR_ses-20230515_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked4 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-CMUVBJ_ses-20230516_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked5 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-DURJIL_ses-20230517_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked6 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-FKCBDA_ses-20230522_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked7 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-FMLJCT_ses-20230516_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked8 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-FNLVBL_ses-20230515_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked9 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-GCYIJW_ses-20230509_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked10 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-GWONVA_ses-20230510_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked11 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-HYQSWK_ses-20230509_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked12 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-KTQRFK_ses-20230515_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked13 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-LRSHEM_ses-20230515_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked14 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-LWZRSF_ses-20230509_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked15 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-QBKAZX_ses-20230522_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked16 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-RABIKZ_ses-20230517_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked17 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-RSQQVJ_ses-20230512_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked18 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-SLIZVT_ses-20230517_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked19 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-SQOYJP_ses-20230522_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked20 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-TSSJPF_ses-20230511_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked21 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-UUPHMI_ses-20230509_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked22 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-VCMVJY_ses-20230522_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked23 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-WPYIVO_ses-20230522_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked24 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-XDFFWN_ses-20230511_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked25 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-XOTAFR_ses-20230522_task-roughxp_acq-qplus_evoked.fif', condition= 0)
-evoked26 = mne.read_evokeds('C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-ZAFAUS_ses-20230516_task-roughxp_acq-qplus_evoked.fif', condition= 0)
+
+evoked1 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-BICUHE_ses-20230515_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked2 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-BOPYLF_ses-20230512_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked3 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-CCIERR_ses-20230512_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked4 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-CMUVBJ_ses-20230516_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked5 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-DURJIL_ses-20230517_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked6 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-FKCBDA_ses-20230522_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked7 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-FMLJCT_ses-20230516_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked8 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-FNLVBL_ses-20230515_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked9 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-GCYIJW_ses-20230509_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked10 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-GWONVA_ses-20230510_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked11 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-HYQSWK_ses-20230509_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked12 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-KTQRFK_ses-20230515_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked13 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-LRSHEM_ses-20230515_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked14 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-LWZRSF_ses-20230509_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked15 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-QBKAZX_ses-20230522_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked16 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-RABIKZ_ses-20230517_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked17 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-RSQQVJ_ses-20230512_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked18 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-SLIZVT_ses-20230517_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked19 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-SQOYJP_ses-20230522_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked20 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-TSSJPF_ses-20230511_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked21 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-UUPHMI_ses-20230509_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked22 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-VCMVJY_ses-20230522_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked23 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-WPYIVO_ses-20230522_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked24 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-XDFFWN_ses-20230511_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked25 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-XOTAFR_ses-20230522_task-roughxp_acq-rnet_evoked.fif', condition= 0)
+evoked26 = mne.read_evokeds(f'C:/Users/mfratice/OneDrive - Institut Pasteur Paris/Documents/IDA_STAGE/DATA/data/data_analyzed/evoked/sub-ZAFAUS_ses-20230516_task-roughxp_acq-rnet_evoked.fif', condition= 0)
 
 #%%
 
@@ -173,29 +144,87 @@ evoked26.plot()
 
 all_evoked = [
     evoked1,
-    evoked2,
-    evoked3,
+    #evoked2,
+    #evoked3,
     evoked4,
     evoked5,
     evoked6,
-    evoked7,
+    #evoked7,
     evoked8,
+    #evoked9,
+    #evoked10,
+    evoked11,
+    #evoked12,
+    #evoked13,
+    evoked14,
+    #evoked15,
+    #evoked16,
+    #evoked17,
+    #evoked18,
+    #evoked19,
+    evoked20,
+    #evoked21,
+    #evoked22,
+    evoked23,
+    #evoked24,
+    evoked25,
+    evoked26,
+]
+
+lQA_evoked = [
+    #evoked1,
+    ##evoked2,
+    evoked3,
+    #evoked4,
+    #evoked5,
+    #evoked6,
+    evoked7,
+    #evoked8,
     evoked9,
     evoked10,
-    evoked11,
+    #evoked11,
     evoked12,
     evoked13,
-    evoked14,
+    #evoked14,
     evoked15,
     evoked16,
     evoked17,
     evoked18,
     evoked19,
-    evoked20,
+    #evoked20,
     evoked21,
     evoked22,
-    evoked23,
+    #evoked23,
     evoked24,
+    #evoked25,
+    #evoked26,
+]
+
+hQA_evoked = [
+    evoked1,
+    #evoked2,
+    #evoked3,
+    evoked4,
+    evoked5,
+    evoked6,
+    #evoked7,
+    evoked8,
+    #evoked9,
+    #evoked10,
+    evoked11,
+    #evoked12,
+    #evoked13,
+    evoked14,
+    #evoked15,
+    #evoked16,
+    #evoked17,
+    #evoked18,
+    #evoked19,
+    evoked20,
+    #evoked21,
+    #evoked22,
+    evoked23,
+    #evoked24,
     evoked25,
     evoked26,
 ]
@@ -209,7 +238,11 @@ big_evoked.filter(l_freq=1, h_freq=30, picks='eeg')
 big_evoked.plot()
 
 #%%
+evokeds = dict(lowQA=lQA_evoked, highQA=hQA_evoked)
+mne.viz.plot_compare_evokeds(evokeds, picks='eeg', combine='mean')
 
+
+#%%
 # create a BIDS compliant filename
 filename = f"sub-{data['sub']}_ses-{data['ses']}_task-{data['task']}_acq-{data['acq']}_evoked.fif"
 # create a BIDS compliant folder structure
