@@ -21,7 +21,7 @@ The online version can be read here :
 https://matthieufra.github.io/roughness-eeg-internship-report/
 
 The OSF project can be found here : 
-https://osf.io/5tdes/
+https://osf.io/5tdes/?view_only=afb587f8add24c009cfc036f5ec1d8cf
 
 This report was only written using OpenSource tools, in order to create a open access work, in a web compliant format. 
 
